@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  category_cost: MyString
+  category: one
+  cost: one
+
+two:
+  category_cost: MyString
+  category: two
+  cost: two

@@ -1,0 +1,66 @@
+<%= form_for(cost) do |f| %>
+  <% if cost.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(cost.errors.count, "error") %> prohibited this cost from being saved:</h2>
+
+      <ul>
+      <% cost.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  
+
+
+
+<div class="container col-md-8">
+  <div class="form-group">
+   <%= f.label :amount %>
+    <%= f.number_field :amount, class: 'form-control' %>
+  </div>
+  
+  <div class="form-group">
+    <%= f.label :issued %>
+    <%= f.datetime_select :issued, class: "form-group" %>
+  </div>
+
+
+  <div class="form-group">
+    <%= f.label :categories %>
+    <%= f.collection_check_boxes :categories, Category.all, :id, :name  %>
+  </div>
+    
+
+          
+  <div class="form-group">
+     <%= f.submit "Update ",class: 'btn btn-success' %>
+    <%= f.submit "Back",class: 'btn btn-primary' %>
+  
+  </div>
+
+</div>
+
+
+<% end %>
+
+ 
+
+
+
+
+
+ 
+
+
+
+
+
+
+ 
+
+
+
+
+ 
